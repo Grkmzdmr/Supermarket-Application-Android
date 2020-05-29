@@ -20,9 +20,7 @@ Kredi kartı ödeme sistemi
 ![Banner7](https://github.com/Grkmzdmr/SupermarketApplication/blob/master/app/src/main/res/drawable/git7.png)
 
 **Goal Of The Project:**
-Stores the user's e-mail, password, address and contact information using the Firebase database.Password renewal
-with the option to update the address and user information.
-An e-commerce application that sells organic products with an updated basket.
+A Supermarket E-Shopping app that Uses Firebase database to store Users E-Mail , passwords , address data and has a password recovery system and has the ability to let the user change his/hers address and data. And sells organic products with the real time updated cart
 
 **Project's Deficiencies:**
 
