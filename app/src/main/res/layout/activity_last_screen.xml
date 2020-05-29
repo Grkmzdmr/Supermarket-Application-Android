@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".LastScreen">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="BİZİ TERCİH ETTİĞİNİZ İÇİN TEŞEKKÜR EDERİZ"
+       android:textSize="30sp"
+       android:gravity="center"
+       android:layout_marginTop="30dp"
+       />
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textSize="20sp"
+       android:text="Siparişiniz başarıyla oluşturulmuştur"
+       android:gravity="center"
+       android:layout_marginLeft="20dp"
+       android:layout_marginTop="150dp"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="En yakın zamanda telefon ile iletişime geçilecektir"
+       android:layout_marginLeft="30dp"
+       android:layout_marginTop="200dp"
+       style="@style/AppTheme.NoActionBar"
+       />
+   <Button
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Ana Sayfaya Dön"
+       android:id="@+id/backhome"
+       android:onClick="backHome"
+       android:layout_marginTop="400dp"
+       android:layout_marginLeft="100dp"/>
+
+
+    </RelativeLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

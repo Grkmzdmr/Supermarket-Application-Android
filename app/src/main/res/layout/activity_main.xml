@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".SignInActivity"
+    >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:text="Şifrenizi mi unuttunuz?"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="240dp"
+                android:id="@+id/resetP"
+                android:onClick="resetP">
+
+            </TextView>
+
+
+
+
+
+            <EditText
+                android:id="@+id/emailText"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="90dp"
+                android:hint="E-posta Adresiniz">
+
+             </EditText>
+            <EditText
+                android:id="@+id/passwordText"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="180dp"
+                android:hint="Şifreniz"
+                android:inputType="textPassword">
+
+            </EditText>
+            <Button
+                android:id="@+id/signin"
+                android:onClick="signIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Giriş Yap"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="290dp">
+
+            </Button>
+            <Button
+                android:id="@+id/gosignup"
+                android:onClick="goSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kayıt Ol"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="250dp"
+                android:layout_marginTop="290dp">
+
+            </Button>
+
+
+
+
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

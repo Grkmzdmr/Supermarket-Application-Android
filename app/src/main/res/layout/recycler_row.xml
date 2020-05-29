@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+
+        android:background="#C9CDC8">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/load"
+            android:id="@+id/recycler_row_imageview"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Portakal 500g"
+            android:textSize="20sp"
+            android:textColor="@android:color/background_dark"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="130dp"
+            android:id="@+id/recycler_row_nameText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="3"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="290dp"
+            android:id="@+id/recycler_row_numberText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Adet"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="310dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Fiyat = "
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="150dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="30"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="230dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/recycler_row_moneyText"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="TL"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="260dp"/>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

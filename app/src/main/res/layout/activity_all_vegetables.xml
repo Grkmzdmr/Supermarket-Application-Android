@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".allVegetables">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="260dp"
+                android:id="@+id/salatalıkButton"
+                android:onClick="addSalatalık"
+                />
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/hiyar"
+                android:layout_marginTop="40dp"
+                android:id="@+id/salatalıkView"
+                ></ImageView>
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="220dp"
+                android:id="@+id/numberButton7"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:text="Salatalık 500g"
+                android:textColor="#000000"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="225dp"
+                android:textSize="19sp"
+                android:id="@+id/salatalıkText"></TextView>
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/domatess"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="200dp"
+                android:id="@+id/domatesView"
+                ></ImageView>
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="260dp"
+                android:layout_marginLeft="200dp"
+                android:id="@+id/domatesButton"
+                android:onClick="addDomates"
+                />
+
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="220dp"
+                android:layout_marginLeft="330dp"
+                android:id="@+id/numberButton8"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="40dp"
+                android:text="Domates 500g"
+                android:textColor="#000000"
+                android:layout_marginLeft="205dp"
+                android:layout_marginTop="225dp"
+                android:textSize="19sp"
+                android:id="@+id/domatesText"></TextView>
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="590dp"
+                android:id="@+id/brokoliButton"
+                android:onClick="addBrokoli"
+                />
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/brokoli"
+                android:layout_marginTop="350dp"
+                android:id="@+id/brokoliView"
+                ></ImageView>
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="550dp"
+                android:id="@+id/numberButton9"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Brokoli 500g"
+                android:textColor="#000000"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="555dp"
+                android:textSize="19sp"
+                android:id="@+id/brokoliText"></TextView>
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/ispanak"
+                android:layout_marginTop="350dp"
+                android:layout_marginLeft="200dp"
+                android:id="@+id/ıspanakView"
+                ></ImageView>
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="590dp"
+                android:layout_marginLeft="200dp"
+                android:id="@+id/ıspanakButton"
+                android:onClick="addIspanak"
+                />
+
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="550dp"
+                android:layout_marginLeft="330dp"
+                android:id="@+id/numberButton10"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Ispanak 500g"
+                android:textColor="#000000"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="555dp"
+                android:textSize="19sp"
+                android:id="@+id/ıspanakText"></TextView>
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="920dp"
+                android:id="@+id/patatesButton"
+                android:onClick="addPatates"
+                />
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/patates"
+                android:layout_marginTop="680dp"
+                android:id="@+id/patatesView"
+                ></ImageView>
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="880dp"
+                android:id="@+id/numberButton11"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Patates 1kg"
+                android:textColor="#000000"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="885dp"
+                android:textSize="19sp"
+                android:id="@+id/patatesText"></TextView>
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/marul"
+                android:layout_marginTop="680dp"
+                android:layout_marginLeft="200dp"
+                android:id="@+id/marulView"
+                ></ImageView>
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="920dp"
+                android:layout_marginLeft="200dp"
+                android:id="@+id/marulButton"
+                android:onClick="addMarul"
+                />
+
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="880dp"
+                android:layout_marginLeft="330dp"
+                android:id="@+id/numberButton12"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:text="Marul Adet"
+                android:textColor="#000000"
+                android:layout_marginLeft="230dp"
+                android:layout_marginTop="885dp"
+                android:textSize="19sp"
+                android:id="@+id/marulText"></TextView>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

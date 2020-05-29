@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".allBreakfast">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="260dp"
+                android:id="@+id/sucukButton"
+                android:onClick="addSucuk"
+                />
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/sucuk"
+                android:layout_marginTop="40dp"
+                android:id="@+id/sucukView"
+                ></ImageView>
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="220dp"
+                android:id="@+id/numberButton21"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="45dp"
+                android:text="Sucuk 500 gr"
+                android:textColor="#000000"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="223dp"
+                android:textSize="17sp"
+                android:id="@+id/sucukText"></TextView>
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/zeytin"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="200dp"
+                android:id="@+id/zeytinView"
+                ></ImageView>
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="260dp"
+                android:layout_marginLeft="200dp"
+                android:id="@+id/zeytinButton"
+                android:onClick="addZeytin"
+                />
+
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="220dp"
+                android:layout_marginLeft="330dp"
+                android:id="@+id/numberButton22"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="145dp"
+                android:layout_height="45dp"
+                android:text="Zeytin 500 gr"
+                android:textColor="#000000"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="223dp"
+                android:textSize="17sp"
+                android:id="@+id/zeytinText"></TextView>
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="590dp"
+                android:id="@+id/fumeButton"
+                android:onClick="addFume"
+                />
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/fume"
+                android:layout_marginTop="350dp"
+                android:id="@+id/fumeView"
+                ></ImageView>
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="550dp"
+                android:id="@+id/numberButton23"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="43dp"
+                android:text="Hindi Füme 500 gr"
+                android:textColor="#000000"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="550dp"
+                android:textSize="17sp"
+                android:id="@+id/fumeText"></TextView>
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/bal"
+                android:layout_marginTop="350dp"
+                android:layout_marginLeft="200dp"
+                android:id="@+id/balView"
+                ></ImageView>
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="590dp"
+                android:layout_marginLeft="200dp"
+                android:id="@+id/balButton"
+                android:onClick="addBal"
+                />
+
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="550dp"
+                android:layout_marginLeft="330dp"
+                android:id="@+id/numberButton24"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:text="Bal 250 gr"
+                android:textColor="#000000"
+                android:layout_marginLeft="210dp"
+                android:layout_marginTop="550dp"
+                android:textSize="17sp"
+                android:id="@+id/balText"></TextView>
+            <Button
+                android:layout_width="190dp"
+                android:layout_height="40dp"
+                android:text="Sepete Ekle"
+                android:layout_marginTop="920dp"
+                android:id="@+id/pastırmaButton"
+                android:onClick="addPastırma"
+                />
+            <ImageView
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:background="@drawable/pastirma"
+                android:layout_marginTop="680dp"
+                android:id="@+id/pastırmaView"
+                ></ImageView>
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:layout_marginTop="880dp"
+                android:id="@+id/numberButton25"
+                app:backGroundColor="#CA1313"
+                >
+
+            </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:text="Pastırma 100gr"
+                android:textColor="#000000"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="880dp"
+                android:textSize="17sp"
+                android:id="@+id/pastırmaText"></TextView>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

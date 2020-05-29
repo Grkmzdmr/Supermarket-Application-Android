@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:text="Teslimat Adresi"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/teslimatAdresi">
+
+            </TextView>
+
+            <EditText
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="80dp"
+                android:hint="Ad"
+                android:id="@+id/takeNName">
+
+            </EditText>
+            <EditText
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="140dp"
+                android:hint="Soyad"
+                android:id="@+id/takeSName"></EditText>
+            <EditText
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="200dp"
+                android:hint="Telefon"
+                android:inputType="phone"
+                android:digits="0123456789+"
+                android:id="@+id/takeNNumber">
+
+            </EditText>
+            <EditText
+                android:layout_width="380dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="260dp"
+                android:hint="Şehir"
+                android:id="@+id/takeCCity">
+
+            </EditText>
+            <EditText
+                android:layout_width="380dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="320dp"
+                android:hint="Adres"
+                android:id="@+id/takeAAdress"
+                android:gravity="top"
+                android:maxLength="80">
+
+            </EditText>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="650dp"
+                android:text="Kaydet"
+                android:onClick="kaydet"
+                android:id="@+id/kaydet"></Button>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll"
+    >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="500dp"
+            android:layout_height="40dp"
+            android:text="HESABIM"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:id="@+id/textView">
+
+        </TextView>
+        <TextView
+            android:layout_width="500dp"
+            android:layout_height="40dp"
+            android:text="Hoşgeldin "
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:id="@+id/textView2">
+
+        </TextView>
+
+
+
+            <Button
+            android:layout_width="500dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="90dp"
+            android:text="Giriş Yap / Üye OL"
+            android:textSize="20sp"
+            android:shadowColor="#000000"
+            android:id="@+id/loginorcreate"
+            android:onClick="loginorcreate">
+        </Button>
+
+         <Button
+             android:layout_width="500dp"
+             android:layout_height="80dp"
+             android:layout_marginTop="90dp"
+             android:text="Hesap Bilgilerim"
+             android:textSize="20sp"
+             android:shadowColor="#000000"
+             android:id="@+id/myaccount"
+             android:onClick="myaccount"></Button>
+
+
+
+         <Button
+             android:layout_width="500dp"
+             android:layout_height="80dp"
+             android:layout_marginTop="180dp"
+             android:text="Adreslerim"
+             android:textSize="20sp"
+             android:shadowColor="#000000"
+             android:id="@+id/myAdresses"
+             android:onClick="myAdress"></Button>
+
+
+
+
+         <Button
+             android:layout_width="500dp"
+             android:layout_height="80dp"
+             android:layout_marginTop="270dp"
+             android:text="Çıkış Yap"
+             android:textSize="20sp"
+             android:id="@+id/logout"
+             android:onClick="logOutt"
+             >
+
+         </Button>
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>

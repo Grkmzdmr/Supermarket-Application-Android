@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <TextView
+            android:layout_width="400dp"
+            android:layout_height="90dp"
+            android:text="Bu sayfadan yeni adres oluşturabilir,mevcut adreslerinizi düzenleyebilir ya da silebilirsiniz.
+Bu sayfada yapacağanız adres değişiklikleri,daha önce vermiş olduğunuz siparişleri etkilemez."
+            android:layout_marginTop="20dp"
+            android:textColor="#000000"
+            android:id="@+id/information"
+
+            >
+            
+        </TextView>
+        <Button
+            android:layout_width="380dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="120dp"
+            android:text="Teslimat adresi ekle"
+            android:gravity="center"
+            android:background="@drawable/button1"
+            android:id="@+id/addAdress"
+            android:onClick="addAdress">
+        </Button>
+        <TextView
+            android:layout_width="380dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="240dp"
+            android:text="HENÜZ EKLENMİŞ BİR ADRESİNİZ YOK"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:id="@+id/adressText">
+
+        </TextView>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:text="Değiştir"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="440dp"
+            android:background="#FFFF"
+
+            android:id="@+id/changeAdress"
+            android:onClick="changeAdress">
+
+        </Button>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:text="Sil"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="440dp"
+            android:background="#CA1313"
+            android:id="@+id/deleteAdress"
+            android:onClick="deleteAdress">
+
+        </Button>
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ScrollView>

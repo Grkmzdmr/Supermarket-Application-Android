@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".cartActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ECF689"
+        android:layout_alignParentTop="true"
+        android:id="@+id/rlt1">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEPETİM"
+            android:layout_marginLeft="50dp"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Sepeti Boşalt"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            android:textColor="@android:color/black"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="0dp"
+            android:onClick="clearCart"
+            android:id="@+id/clear"/>
+
+
+        
+        
+        
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlt1"
+        android:layout_above="@id/nextButton"
+        android:id="@+id/rcyc">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ECF689"
+        android:text="İLERİ"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:id="@+id/nextButton"
+        android:onClick="odemeEkranı"/>
+
+</RelativeLayout>

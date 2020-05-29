@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".SignUpActivity"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/takeName"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="90dp"
+                android:hint="İsim Soyisim">
+
+            </EditText>
+
+            <EditText
+                android:id="@+id/takeBirth"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="390dp"
+                android:hint="Doğum Tarihiniz">
+
+            </EditText>
+
+
+
+
+
+
+
+            <EditText
+                android:id="@+id/takeMail"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="150dp"
+                android:hint="E-posta Adresiniz">
+
+            </EditText>
+            <EditText
+                android:id="@+id/takePassword"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="210dp"
+                android:hint="Şifreniz">
+
+             </EditText>
+            <EditText
+                android:id="@+id/takeTelephone"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="270dp"
+                android:hint="Telefon Numaranız">
+
+            </EditText>
+            <EditText
+                android:id="@+id/takeCity"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="330dp"
+                android:hint="Şehriniz">
+
+            </EditText>
+            <Button
+                android:onClick="signup"
+                android:id="@+id/signUp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Kayıt Ol"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="500dp">
+
+            </Button>
+
+
+
+    </RelativeLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
