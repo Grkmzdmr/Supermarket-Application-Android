@@ -115,5 +115,8 @@ public class FirstScreen extends AppCompatActivity {
         Intent intent = new Intent(FirstScreen.this,cartActivity.class);
         startActivity(intent);
     }
-
+    public void goCampaign(View view){
+        Intent intentToCamp = new Intent(FirstScreen.this,Campaign.class);
+        startActivity(intentToCamp);
+    }
 }

@@ -53,7 +53,8 @@
                 android:layout_height="287dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="-13dp"
-                android:background="@drawable/kkkm" />
+                android:background="@drawable/kkkm"
+                android:onClick="goCampaign"/>
 
 
 

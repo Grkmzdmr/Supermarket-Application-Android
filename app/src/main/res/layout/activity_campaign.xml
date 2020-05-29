@@ -1,0 +1,77 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/bg"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="75 TL Alışverişte teslimat bedava "
+            android:id="@+id/button"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="75 Tl ve üzeri alışverişlerinizde teslimat ücreti ödemiyorsunuz."
+            android:background="#FFFFFF"
+            android:layout_marginTop="55dp"
+            android:id="@+id/button1"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="İlk siparişinizde teslimat ücreti bizden"
+            android:layout_marginTop="130dp"
+            android:id="@+id/button2"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:text="Vereceğiniz ilk siparişte teslimat ücreti bizim tarafımızdan karşılanıyor."
+            android:background="#FFFFFF"
+            android:layout_marginTop="186dp"
+            android:id="@+id/button3"/>
+
+
+
+
+
+
+    </RelativeLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</ScrollView>
