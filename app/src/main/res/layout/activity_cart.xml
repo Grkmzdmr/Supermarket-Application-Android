@@ -21,17 +21,7 @@
             android:textStyle="bold"
             android:textSize="30sp"
             android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Sepeti Boşalt"
-            android:textSize="10sp"
-            android:textStyle="normal"
-            android:textColor="@android:color/black"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="0dp"
-            android:onClick="clearCart"
-            android:id="@+id/clear"/>
+
 
 
         

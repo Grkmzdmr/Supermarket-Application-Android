@@ -23,6 +23,7 @@
             android:layout_width="500dp"
             android:layout_height="40dp"
             android:text="HESABIM"
+            android:textColor="#000000"
             android:textSize="30sp"
             android:gravity="center"
             android:layout_marginTop="10dp"
@@ -59,6 +60,7 @@
              android:layout_marginTop="90dp"
              android:text="Hesap Bilgilerim"
              android:textSize="20sp"
+             android:background="#E6EAF1"
              android:shadowColor="#000000"
              android:id="@+id/myaccount"
              android:onClick="myaccount"></Button>
@@ -73,6 +75,7 @@
              android:textSize="20sp"
              android:shadowColor="#000000"
              android:id="@+id/myAdresses"
+             android:background="#E6EAF1"
              android:onClick="myAdress"></Button>
 
 
@@ -83,7 +86,9 @@
              android:layout_height="80dp"
              android:layout_marginTop="270dp"
              android:text="Çıkış Yap"
+             android:textColor="#FFFFFF"
              android:textSize="20sp"
+             android:background="#CA1313"
              android:id="@+id/logout"
              android:onClick="logOutt"
              >
