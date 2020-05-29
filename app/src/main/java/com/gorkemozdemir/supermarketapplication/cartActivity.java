@@ -148,6 +148,7 @@ public class cartActivity extends AppCompatActivity {
    public void odemeEkranı(View view){
         Intent intent = new Intent(cartActivity.this,Payment.class);
         startActivity(intent);
+        finish();
    }
 
 }
