@@ -96,7 +96,5 @@ public class ProductList extends AppCompatActivity {
 
     }
 
-    public void AddToCart(View view){
 
-    }
 }
