@@ -150,7 +150,9 @@ public class cartActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
    }
+   public void AddToCart(View view){
 
+   }
 }
 
 

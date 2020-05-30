@@ -82,32 +82,38 @@ public class FirstScreen extends AppCompatActivity {
     }
 
     public void goMeyve(View view) {
-        Intent intent = new Intent(FirstScreen.this, allFruits.class);
+        Intent intent = new Intent(FirstScreen.this, ProductList.class);
+        intent.putExtra("info","meyve");
         startActivity(intent);
     }
 
     public void goSebze(View view) {
-        Intent intent = new Intent(FirstScreen.this, allVegetables.class);
+        Intent intent = new Intent(FirstScreen.this, ProductList.class);
+        intent.putExtra("info","sebze");
         startActivity(intent);
     }
 
     public void goEt(View view) {
-        Intent intent = new Intent(FirstScreen.this, allMeat.class);
+        Intent intent = new Intent(FirstScreen.this,ProductList.class);
+        intent.putExtra("info","et");
         startActivity(intent);
     }
 
     public void goBalık(View view) {
-        Intent intent = new Intent(FirstScreen.this, allFish.class);
+        Intent intent = new Intent(FirstScreen.this, ProductList.class);
+        intent.putExtra("info","balık");
         startActivity(intent);
     }
 
     public void goKahvaltılık(View view) {
-        Intent intent = new Intent(FirstScreen.this, allBreakfast.class);
+        Intent intent = new Intent(FirstScreen.this, ProductList.class);
+        intent.putExtra("info","kahvaltı");
         startActivity(intent);
     }
 
     public void goSüt(View view) {
-        Intent intent = new Intent(FirstScreen.this, allMilk.class);
+        Intent intent = new Intent(FirstScreen.this, ProductList.class);
+        intent.putExtra("info","süt");
         startActivity(intent);
     }
 
