@@ -46,9 +46,11 @@
        android:layout_height="wrap_content"
        android:text="Ana Sayfaya Dön"
        android:id="@+id/backhome"
+       android:textColor="#FFFFFF"
+       android:background="#0451AA"
        android:onClick="backHome"
        android:layout_marginTop="530dp"
-       android:layout_marginLeft="100dp"/>
+       android:layout_marginLeft="110dp"/>
 
         <ImageView
             android:id="@+id/delivery"

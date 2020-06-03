@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
@@ -158,13 +160,21 @@ public class ProductList extends AppCompatActivity {
             postData.put("date", FieldValue.serverTimestamp());
             postData.put("downloadUrl",url);
             postData.put("productNumber", "1");
-            HashMap<String,Object> priceData = new HashMap<>();
-            //priceData.put("price",String.valueOf());
-            documentReference1 = firebaseFirestore.collection(UserID).document("Price");
-            documentReference1.set(priceData);
+
 
             documentReference = firebaseFirestore.collection(UserID).document(productName);
-            documentReference.set(postData);
+            documentReference.set(postData).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    Toast.makeText(ProductList.this,"Ürün başarıyla sepetinize eklendi",Toast.LENGTH_SHORT).show();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Toast.makeText(ProductList.this,"Hata oluştu daha sonra tekrar deneyiniz",Toast.LENGTH_SHORT).show();
+
+                }
+            });
 
         }
 

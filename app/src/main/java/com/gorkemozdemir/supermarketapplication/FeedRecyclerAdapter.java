@@ -31,8 +31,6 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
     private ArrayList<String> productImageList;
     private ArrayList<String> productMoneyList;
     private ArrayList<String> productLastMoneyList;
-
-
     int toplam;
     FeedRecyclerAdapter feedRecyclerAdapter;
 
@@ -41,8 +39,7 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
         this.productNumberList = productNumberList;
         this.productImageList = productImageList;
         this.productMoneyList = productMoneyList;
-        this.productLastMoneyList = productMoneyList;
-
+        this.productLastMoneyList = productLastMoneyList;
     }
 
     @NonNull
@@ -62,7 +59,12 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
         Picasso.get().load(productImageList.get(position)).into(holder.imageView);
         holder.changeproduct(position,holder);
         holder.editText.setText(productNumberList.get(position));
-        holder.textView.setText(productLastMoneyList.get(position));
+        if (Integer.parseInt(productNumberList.get(position)) > 1 ){
+            holder.textView.setText(productLastMoneyList.get(position));
+
+        }else{
+            holder.textView.setText(productMoneyList.get(position));
+        }
 
 
 
@@ -104,7 +106,6 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     UserId = firebaseAuth.getCurrentUser().getUid();
                     documentReference = firebaseFirestore.collection(UserId).document(productNameList.get(getAdapterPosition()));
                     final String number = editText.getText().toString();
@@ -112,18 +113,16 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
                     int money = Integer.parseInt(number);
                     int realmoney = Integer.parseInt(productMoneyList.get(holder.getAdapterPosition()));
                     toplam = money * realmoney;
+
                     data.put("productNumber",number);
                     data.put("lastPay",toplam);
+
 
                     documentReference.update(data).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
                             editText.setText(number);
                             textView.setText(String.valueOf(toplam));
-                            HashMap<String,Object> priceData = new HashMap<>();
-                            priceData.put("price",String.valueOf(toplam));
-                            documentReference = firebaseFirestore.collection(UserId).document();
-                            documentReference.set(priceData);
 
 
 
@@ -132,6 +131,7 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
+
 
                         }
                     });

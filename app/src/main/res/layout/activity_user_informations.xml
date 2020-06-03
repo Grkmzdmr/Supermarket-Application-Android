@@ -32,7 +32,7 @@
             <EditText
                 android:layout_width="400dp"
                 android:layout_height="80dp"
-                android:text="Görkem Özdemir "
+                android:text=" "
                 android:textSize="30sp"
                 android:layout_marginTop="50dp"
                 android:textColor="#000000"
@@ -50,7 +50,7 @@
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="60dp"
-                android:text="sehir"
+                android:text=""
                 android:textSize="30sp"
                 android:layout_marginTop="160dp"
                 android:textColor="#000000"
@@ -69,7 +69,7 @@
             <EditText
                 android:layout_width="400dp"
                 android:layout_height="80dp"
-                android:text="gorkem.8@hotmail.com"
+                android:text=""
                 android:textSize="30sp"
                 android:layout_marginTop="270dp"
                 android:textColor="#000000"
@@ -90,7 +90,7 @@
             <EditText
                 android:layout_width="400dp"
                 android:layout_height="80dp"
-                android:text="05316770761"
+                android:text=""
                 android:textSize="30sp"
                 android:layout_marginTop="400dp"
                 android:textColor="#000000"
@@ -109,7 +109,7 @@
             <EditText
                 android:layout_width="400dp"
                 android:layout_height="80dp"
-                android:text="01.01.2000"
+                android:text=""
                 android:textSize="30sp"
                 android:layout_marginTop="510dp"
                 android:textColor="#000000"
@@ -122,6 +122,8 @@
                 android:text="GÜNCELLE"
                 android:layout_marginTop="600dp"
                 android:layout_marginLeft="130dp"
+                android:textColor="#FFFFFF"
+                android:background="#0451AA"
                 android:id="@+id/guncelle"
                 android:onClick="guncelle">
 

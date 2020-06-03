@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     tools:context=".animation"
-    android:onClick="goFirst">
+    android:clickable="false">
 
     <ImageView
         android:id="@+id/organiktext"

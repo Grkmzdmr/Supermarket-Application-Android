@@ -9,7 +9,9 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#ECF689"
+
+
+        android:background="#0451AA"
         android:layout_alignParentTop="true"
         android:id="@+id/rlt1">
         
@@ -17,28 +19,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SEPETİM"
+            android:textColor="#FFFFFF"
+            android:background="#0451AA"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="2dp"
             android:textStyle="bold"
             android:textSize="30sp"
-            android:textColor="@android:color/black"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:text="Sepeti Boşalt"
-            android:background="#CA1313"
-            android:textSize="10sp"
-            android:textStyle="normal"
-            android:textColor="@android:color/white"
-            android:layout_marginLeft="300dp"
-            android:layout_marginTop="5dp"
-
-            android:id="@+id/clear"/>
+            />
 
 
-        
-        
-        
     </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
@@ -55,7 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="#ECF689"
+        android:textColor="#FFFFFF"
+        android:background="#0451AA"
         android:text="İLERİ"
         android:textSize="30sp"
         android:textStyle="bold"

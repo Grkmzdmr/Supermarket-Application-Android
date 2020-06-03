@@ -77,6 +77,8 @@
                 android:layout_marginTop="650dp"
                 android:text="Kaydet"
                 android:onClick="kaydet"
+                android:textColor="#FFFFFF"
+                android:background="#0451AA"
                 android:id="@+id/kaydet"></Button>
         </RelativeLayout>
     </LinearLayout>

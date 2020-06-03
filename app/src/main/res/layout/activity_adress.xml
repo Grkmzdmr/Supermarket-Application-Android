@@ -35,6 +35,7 @@ Bu sayfada yapacağanız adres değişiklikleri,daha önce vermiş olduğunuz si
             android:layout_marginTop="120dp"
             android:text="Teslimat adresi ekle"
             android:gravity="center"
+
             android:background="@drawable/button1"
             android:id="@+id/addAdress"
             android:onClick="addAdress">
@@ -55,7 +56,9 @@ Bu sayfada yapacağanız adres değişiklikleri,daha önce vermiş olduğunuz si
             android:text="Değiştir"
             android:layout_marginLeft="210dp"
             android:layout_marginTop="440dp"
-            android:background="#FFFF"
+
+            android:textColor="#FFFFFF"
+            android:background="#0451AA"
 
             android:id="@+id/changeAdress"
             android:onClick="changeAdress">
@@ -68,6 +71,8 @@ Bu sayfada yapacağanız adres değişiklikleri,daha önce vermiş olduğunuz si
             android:layout_marginLeft="320dp"
             android:layout_marginTop="440dp"
             android:background="#CA1313"
+            android:textColor="#FFFFFF"
+
             android:id="@+id/deleteAdress"
             android:onClick="deleteAdress">
 

@@ -71,7 +71,8 @@
                         android:layout_marginTop="8dp"
                         android:padding="12dp"
                         android:text="Product Name"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="#0451AA"
+
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -102,6 +103,12 @@
 
 
                     </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ürünü sepete eklemek için resmi sağa kaydırınız"
+                        android:layout_marginLeft="45dp"/>
+
 
                 </LinearLayout>
 

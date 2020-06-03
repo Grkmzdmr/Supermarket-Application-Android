@@ -53,8 +53,10 @@
             android:layout_marginTop="100dp"
             android:id="@+id/changeButton"
             android:textColor="#FFFFFF"
+            android:background="#0451AA"
+
             android:onClick="changeproduct"
-            android:background="#CA1313"/>
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -81,6 +83,12 @@
             android:textSize="18sp"
             android:layout_marginTop="180dp"
             android:layout_marginLeft="360dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ürünü silmek için sağa ya da sola kaydırınız"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="240dp"/>
 
 
 

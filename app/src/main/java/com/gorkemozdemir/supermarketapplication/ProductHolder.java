@@ -63,7 +63,7 @@ public class ProductHolder extends RecyclerView.Adapter<ProductHolder.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView image;
-        TextView text, text1,text2;
+        TextView text, text1;
 
 
         public ViewHolder(@NonNull View itemView) {

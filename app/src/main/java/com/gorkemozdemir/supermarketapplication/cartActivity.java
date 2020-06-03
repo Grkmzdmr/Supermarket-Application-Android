@@ -66,7 +66,7 @@ public class cartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cart);
-        button = findViewById(R.id.clear);
+
         productName = new ArrayList<>();
         productImage = new ArrayList<>();
         productNumber = new ArrayList<>();
@@ -82,6 +82,7 @@ public class cartActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.rcyc);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         feedRecyclerAdapter = new FeedRecyclerAdapter(productName,productNumber,productImage,productMoney,productLastMoney);
+        new ItemTouchHelper(itemDelete).attachToRecyclerView(recyclerView);
         recyclerView.setAdapter(feedRecyclerAdapter);
         auth = FirebaseAuth.getInstance();
         authStateListener = new FirebaseAuth.AuthStateListener() {
@@ -159,6 +160,41 @@ public class cartActivity extends AppCompatActivity {
 
 
     }
+    ItemTouchHelper.SimpleCallback itemDelete = new ItemTouchHelper.SimpleCallback(0,ItemTouchHelper.RIGHT|ItemTouchHelper.LEFT){
+
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+            String Name = productName.get(viewHolder.getAdapterPosition());
+            productName.remove(viewHolder.getAdapterPosition());
+            productImage.remove(viewHolder.getAdapterPosition());
+            productNumber.remove(viewHolder.getAdapterPosition());
+            productMoney.remove(viewHolder.getAdapterPosition());
+            productLastMoney.remove(viewHolder.getAdapterPosition());
+
+            FirebaseFirestore.getInstance().collection(UserId).document(Name).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    Toast.makeText(cartActivity.this,"Ürün başarıyla sepetinizden silinmiştir.", Toast.LENGTH_SHORT).show();
+                    Intent intentToCartagain = new Intent(cartActivity.this,cartActivity.class);
+                    startActivity(intentToCartagain);
+                    intentToCartagain.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    finish();
+
+
+                }
+            });
+
+            feedRecyclerAdapter.notifyDataSetChanged();
+        }
+    };
+
+
 
 
    public void odemeEkranı(View view){

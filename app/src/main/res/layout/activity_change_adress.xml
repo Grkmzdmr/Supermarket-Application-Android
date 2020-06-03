@@ -76,6 +76,8 @@
                 android:layout_marginLeft="130dp"
                 android:layout_marginTop="630dp"
                 android:text="Güncelle"
+                android:textColor="#FFFFFF"
+                android:background="#0451AA"
                 android:onClick="update"
                 android:id="@+id/update"></Button>
 
