@@ -171,7 +171,7 @@ public class ProductList extends AppCompatActivity {
         @Override
         public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
             UserID = firebaseAuth.getCurrentUser().getUid();
-            //rsayac = Integer.parseInt(numberButton.getNumber());
+
 
 
             //gelen parayı int'e çeviriyoruz
@@ -191,7 +191,7 @@ public class ProductList extends AppCompatActivity {
             postData.put("productNumber", "1");
 
             //postData.put("maxMoney", String.valueOf(MONEY));
-            documentReference = firebaseFirestore.collection(UserID).document(UserID);
+            documentReference = firebaseFirestore.collection(UserID).document(productName);
             documentReference.set(postData);
 
         }

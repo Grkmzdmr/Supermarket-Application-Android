@@ -52,7 +52,9 @@
             android:layout_marginLeft="250dp"
             android:layout_marginTop="100dp"
             android:id="@+id/changeButton"
-            android:onClick="changeproduct"/>
+            android:textColor="#FFFFFF"
+            android:onClick="changeproduct"
+            android:background="#CA1313"/>
 
         <TextView
             android:layout_width="wrap_content"

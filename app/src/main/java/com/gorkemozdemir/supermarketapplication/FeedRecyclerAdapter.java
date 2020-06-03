@@ -55,7 +55,7 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
         holder.editText.setText(productNumberList.get(position));
         Picasso.get().load(productImageList.get(position)).into(holder.imageView);
         holder.changeproduct(position);
-        holder.editText.setText(productNumberList.get(position));
+
     }
 
     @Override
@@ -90,14 +90,14 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
                 @Override
                 public void onClick(View v) {
                     UserId = firebaseAuth.getCurrentUser().getUid();
-                    documentReference = firebaseFirestore.collection(UserId).document(UserId);
-                    String number = editText.getText().toString();
+                    documentReference = firebaseFirestore.collection(UserId).document(productNameList.get(getAdapterPosition()));
+                    final String number = editText.getText().toString();
                     final Map<String, Object> data = new HashMap<>();
                     data.put("productNumber",number);
                     documentReference.update(data).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {
-
+                                    editText.setText(number);
 
                                 }
                             }).addOnFailureListener(new OnFailureListener() {
