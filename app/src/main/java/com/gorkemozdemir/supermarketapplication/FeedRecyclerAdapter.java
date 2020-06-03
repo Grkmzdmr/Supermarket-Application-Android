@@ -30,13 +30,19 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
     private ArrayList<String> productNumberList;
     private ArrayList<String> productImageList;
     private ArrayList<String> productMoneyList;
+    private ArrayList<String> productLastMoneyList;
 
 
-    public FeedRecyclerAdapter(ArrayList<String> productNameList, ArrayList<String> productNumberList, ArrayList<String> productImageList,ArrayList<String> productMoneyList) {
+    int toplam;
+    FeedRecyclerAdapter feedRecyclerAdapter;
+
+    public FeedRecyclerAdapter(ArrayList<String> productNameList, ArrayList<String> productNumberList, ArrayList<String> productImageList,ArrayList<String> productMoneyList,ArrayList<String> productLastMoneyList) {
         this.productNameList = productNameList;
         this.productNumberList = productNumberList;
         this.productImageList = productImageList;
         this.productMoneyList = productMoneyList;
+        this.productLastMoneyList = productMoneyList;
+
     }
 
     @NonNull
@@ -50,11 +56,19 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
 
     @Override
     public void onBindViewHolder(@NonNull FeedRecyclerAdapter.PostHolder holder, int position) {
-        holder.textView.setText(productMoneyList.get(position));
+
         holder.textView1.setText(productNameList.get(position));
         holder.editText.setText(productNumberList.get(position));
         Picasso.get().load(productImageList.get(position)).into(holder.imageView);
-        holder.changeproduct(position);
+        holder.changeproduct(position,holder);
+        holder.editText.setText(productNumberList.get(position));
+        holder.textView.setText(productLastMoneyList.get(position));
+
+
+
+
+
+
 
     }
 
@@ -70,6 +84,7 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
         Button button;
         String UserId;
         FirebaseAuth firebaseAuth;
+
         private DocumentReference documentReference;
         private FirebaseFirestore firebaseFirestore;
 
@@ -85,27 +100,41 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
             firebaseFirestore = FirebaseFirestore.getInstance();
         }
 
-        public void changeproduct(final int position) {
+        public void changeproduct(final int position, @NonNull final FeedRecyclerAdapter.PostHolder holder) {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     UserId = firebaseAuth.getCurrentUser().getUid();
                     documentReference = firebaseFirestore.collection(UserId).document(productNameList.get(getAdapterPosition()));
                     final String number = editText.getText().toString();
                     final Map<String, Object> data = new HashMap<>();
+                    int money = Integer.parseInt(number);
+                    int realmoney = Integer.parseInt(productMoneyList.get(holder.getAdapterPosition()));
+                    toplam = money * realmoney;
                     data.put("productNumber",number);
+                    data.put("lastPay",toplam);
+
                     documentReference.update(data).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void aVoid) {
-                                    editText.setText(number);
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            editText.setText(number);
+                            textView.setText(String.valueOf(toplam));
+                            HashMap<String,Object> priceData = new HashMap<>();
+                            priceData.put("price",String.valueOf(toplam));
+                            documentReference = firebaseFirestore.collection(UserId).document();
+                            documentReference.set(priceData);
 
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
 
-                                }
-                            });
+
+
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+
+                        }
+                    });
 
                 }
 

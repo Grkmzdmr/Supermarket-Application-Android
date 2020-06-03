@@ -28,7 +28,7 @@ import java.util.Map;
 public class Payment extends AppCompatActivity {
     EditText editText;
     Button button,button1;
-    private DocumentReference documentReference;
+    private DocumentReference documentReference,documentReference1;
     private FirebaseFirestore firebaseFirestore;
     private FirebaseAuth firebaseAuth;
     String UserId;
@@ -97,6 +97,7 @@ public class Payment extends AppCompatActivity {
             }
         });
     }
+
 
     public void goLast(View view){
         Intent intentoLastS = new Intent(Payment.this,LastScreen.class);

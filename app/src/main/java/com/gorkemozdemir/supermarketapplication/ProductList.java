@@ -37,16 +37,12 @@ public class ProductList extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     ArrayList<String> Name;
     ArrayList<String> Number;
-    private DocumentReference documentReference;
-    private StorageReference storageReference;
+    private DocumentReference documentReference,documentReference1;
     ArrayList<String> Money;
-    ArrayList<String> S;
     ProductHolder productHolder;
     RecyclerView recyclerVieww;
     String UserID;
-    private Object holder;
-    String position;
-    String sayac;
+
 
 
     int realmoney;
@@ -68,7 +64,7 @@ public class ProductList extends AppCompatActivity {
         Number = new ArrayList<>();
         Money = new ArrayList<>();
 
-        numberButton = findViewById(R.id.numberButton2);
+
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
         recyclerVieww = findViewById(R.id.rcyc1);
@@ -99,35 +95,6 @@ public class ProductList extends AppCompatActivity {
     }
 
 
-    /*public void getNum(@NonNull final RecyclerView.ViewHolder viewHolder){
-        UserID = firebaseAuth.getCurrentUser().getUid();
-        rsayac = Integer.parseInt(numberButton.getNumber());
-
-
-
-        realmoney = Integer.parseInt(Money.get(viewHolder.getAdapterPosition()));
-        MONEY = realmoney * rsayac;
-
-
-        productName = Name.get(viewHolder.getAdapterPosition());
-        productMoney = Money.get(viewHolder.getAdapterPosition());
-    }*/
-    /*public void getNum(@NonNull final RecyclerView.ViewHolder viewHolder){
-      //  UserID = firebaseAuth.getCurrentUser().getUid();
-        rsayac = Integer.parseInt(numberButton.getNumber());
-
-
-
-        realmoney = Integer.parseInt(Money.get(viewHolder.getAdapterPosition()));
-        MONEY = realmoney * rsayac;
-
-
-        productName = Name.get(viewHolder.getAdapterPosition());
-        productMoney = Money.get(viewHolder.getAdapterPosition());
-        return null;
-    }
-*/
-
     public void getDataF(String Tur) {
 
         CollectionReference collectionReference = firebaseFirestore.collection(Tur);
@@ -144,6 +111,7 @@ public class ProductList extends AppCompatActivity {
                         String Namee = (String) data.get("Name");
                         String Imagee = (String) data.get("Url");
                         String Moneyy = (String) data.get("Money");
+
 
 
                         Name.add(Namee);
@@ -178,6 +146,7 @@ public class ProductList extends AppCompatActivity {
             realmoney = Integer.parseInt(Money.get(viewHolder.getAdapterPosition()));
 
 
+
             String url = Number.get(viewHolder.getAdapterPosition());
             productName = Name.get(viewHolder.getAdapterPosition());
             productMoney = Money.get(viewHolder.getAdapterPosition());
@@ -189,8 +158,11 @@ public class ProductList extends AppCompatActivity {
             postData.put("date", FieldValue.serverTimestamp());
             postData.put("downloadUrl",url);
             postData.put("productNumber", "1");
+            HashMap<String,Object> priceData = new HashMap<>();
+            //priceData.put("price",String.valueOf());
+            documentReference1 = firebaseFirestore.collection(UserID).document("Price");
+            documentReference1.set(priceData);
 
-            //postData.put("maxMoney", String.valueOf(MONEY));
             documentReference = firebaseFirestore.collection(UserID).document(productName);
             documentReference.set(postData);
 
@@ -200,27 +172,6 @@ public class ProductList extends AppCompatActivity {
 
     };
 
-
-  /* public void AddToCart(View view){
-
-
-       UserID = firebaseAuth.getCurrentUser().getUid();
-
-        HashMap<String, Object> postData = new HashMap<>();
-        postData.put("productName", productName);
-        postData.put("productMoney", productMoney);
-        postData.put("date", FieldValue.serverTimestamp());
-
-        // postData.put("downloadUrl", downloadUrl);
-        postData.put("productNumber", numberButton.getNumber());
-
-        postData.put("maxMoney", String.valueOf(MONEY));
-        documentReference = firebaseFirestore.collection(UserID).document();
-        documentReference.set(postData);
-
-
-
-    }*/
 
 
 }

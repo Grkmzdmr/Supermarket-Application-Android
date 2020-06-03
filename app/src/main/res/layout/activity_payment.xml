@@ -33,7 +33,7 @@
             android:textColor="#323437"/>
         <EditText
             android:layout_width="380dp"
-            android:layout_height="200dp"
+            android:layout_height="170dp"
             android:layout_marginTop="160dp"
             android:hint="Adres"
             android:id="@+id/payadress"
@@ -43,7 +43,7 @@
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:text="Adresi Değiştir"
-            android:layout_marginTop="360dp"
+            android:layout_marginTop="340dp"
             android:layout_marginLeft="100dp"
             android:onClick="changeAdress2"
             android:id="@+id/paychangeadres"

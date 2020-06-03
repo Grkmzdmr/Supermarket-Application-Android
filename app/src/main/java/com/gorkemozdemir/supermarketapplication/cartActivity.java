@@ -47,6 +47,8 @@ public class cartActivity extends AppCompatActivity {
     ArrayList<String> productImage;
     ArrayList<String> productNumber;
     ArrayList<String> productMoney;
+    ArrayList<String> productLastMoney;
+
     EditText editText1;
     private FirebaseAuth auth;
     private DocumentReference documentReference;
@@ -69,6 +71,7 @@ public class cartActivity extends AppCompatActivity {
         productImage = new ArrayList<>();
         productNumber = new ArrayList<>();
         productMoney = new ArrayList<>();
+        productLastMoney = new ArrayList<>();
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
         editText1 = findViewById(R.id.recycler_row_numberText);
@@ -78,7 +81,7 @@ public class cartActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.rcyc);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        feedRecyclerAdapter = new FeedRecyclerAdapter(productName,productNumber,productImage,productMoney);
+        feedRecyclerAdapter = new FeedRecyclerAdapter(productName,productNumber,productImage,productMoney,productLastMoney);
         recyclerView.setAdapter(feedRecyclerAdapter);
         auth = FirebaseAuth.getInstance();
         authStateListener = new FirebaseAuth.AuthStateListener() {
@@ -136,10 +139,14 @@ public class cartActivity extends AppCompatActivity {
                         String Image = (String) data.get("downloadUrl");
                         String Number = (String) data.get("productNumber");
                         String Money = String.valueOf(data.get("productMoney"));
+                        String lastMoney = String.valueOf(data.get("lastPay"));
                         productName.add(Name);
                         productImage.add(Image);
                         productMoney.add(Money);
                         productNumber.add(Number);
+                        productLastMoney.add(lastMoney);
+
+
 
                         feedRecyclerAdapter.notifyDataSetChanged();
                     }
