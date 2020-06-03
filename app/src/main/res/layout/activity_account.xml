@@ -44,16 +44,17 @@
 
 
             <Button
-            android:layout_width="500dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="90dp"
-            android:text="Giriş Yap / Üye OL"
-            android:textSize="20sp"
-            android:shadowColor="#000000" android:textColor="#FFFFFF" android:background="#0451AA"
-            android:id="@+id/loginorcreate"
-            android:onClick="loginorcreate"
-            >
-        </Button>
+                android:layout_width="500dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="90dp"
+                android:text="Giriş Yap / Üye OL"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                android:background="#0451AA"
+                android:shadowColor="#000000"
+                android:id="@+id/loginorcreate"
+                android:onClick="loginorcreate"/>
+
 
          <Button
              android:layout_width="500dp"
