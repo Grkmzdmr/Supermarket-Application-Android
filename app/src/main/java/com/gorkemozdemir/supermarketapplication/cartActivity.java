@@ -2,12 +2,14 @@ package com.gorkemozdemir.supermarketapplication;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.ClipData;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -34,6 +37,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class cartActivity extends AppCompatActivity {
@@ -43,10 +47,13 @@ public class cartActivity extends AppCompatActivity {
     ArrayList<String> productImage;
     ArrayList<String> productNumber;
     ArrayList<String> productMoney;
+    EditText editText1;
     private FirebaseAuth auth;
+    private DocumentReference documentReference;
+    String UserId;
     private FirebaseAuth.AuthStateListener authStateListener;
     FeedRecyclerAdapter feedRecyclerAdapter;
-    String UserId;
+
     Button button;
 
     RecyclerView recyclerView;
@@ -64,6 +71,7 @@ public class cartActivity extends AppCompatActivity {
         productMoney = new ArrayList<>();
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
+        editText1 = findViewById(R.id.recycler_row_numberText);
 
 
 
@@ -85,6 +93,7 @@ public class cartActivity extends AppCompatActivity {
 
                 }else if (user != null){
                     getDataFromFirebase();
+
                 }
             }
         };
@@ -126,7 +135,7 @@ public class cartActivity extends AppCompatActivity {
                         String Name = (String) data.get("productName");
                         String Image = (String) data.get("downloadUrl");
                         String Number = (String) data.get("productNumber");
-                        String Money = (String) data.get("maxMoney");
+                        String Money = String.valueOf(data.get("productMoney"));
                         productName.add(Name);
                         productImage.add(Image);
                         productMoney.add(Money);
@@ -150,9 +159,7 @@ public class cartActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
    }
-   public void AddToCart(View view){
 
-   }
 }
 
 

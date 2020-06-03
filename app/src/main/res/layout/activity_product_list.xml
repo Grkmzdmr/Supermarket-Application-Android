@@ -8,11 +8,17 @@
     tools:context=".ProductList">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcyc1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/rlt1"
 
-        android:id="@+id/rcyc1">
+        android:layout_below="@+id/rlt1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+
+        >
 
     </androidx.recyclerview.widget.RecyclerView>
 

@@ -1,17 +1,29 @@
 package com.gorkemozdemir.supermarketapplication;
 
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapter.PostHolder> {
     private ArrayList<String> productNameList;
@@ -40,8 +52,10 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
     public void onBindViewHolder(@NonNull FeedRecyclerAdapter.PostHolder holder, int position) {
         holder.textView.setText(productMoneyList.get(position));
         holder.textView1.setText(productNameList.get(position));
-        holder.textView2.setText(productNumberList.get(position));
+        holder.editText.setText(productNumberList.get(position));
         Picasso.get().load(productImageList.get(position)).into(holder.imageView);
+        holder.changeproduct(position);
+        holder.editText.setText(productNumberList.get(position));
     }
 
     @Override
@@ -51,20 +65,53 @@ public class FeedRecyclerAdapter extends RecyclerView.Adapter<FeedRecyclerAdapte
 
     public class PostHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
-        TextView textView,textView1,textView2;
+        TextView textView,textView1;
+        EditText editText;
+        Button button;
+        String UserId;
+        FirebaseAuth firebaseAuth;
+        private DocumentReference documentReference;
+        private FirebaseFirestore firebaseFirestore;
 
 
         public PostHolder(@NonNull View itemView) {
             super(itemView);
-
+            button = itemView.findViewById(R.id.changeButton);
             imageView = itemView.findViewById(R.id.recycler_row_imageview);
             textView = itemView.findViewById(R.id.recycler_row_moneyText);
             textView1 = itemView.findViewById(R.id.recycler_row_nameText);
-            textView2 = itemView.findViewById(R.id.recycler_row_numberText);
+            editText = itemView.findViewById(R.id.recycler_row_numberText);
+            firebaseAuth = FirebaseAuth.getInstance();
+            firebaseFirestore = FirebaseFirestore.getInstance();
         }
 
+        public void changeproduct(final int position) {
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    UserId = firebaseAuth.getCurrentUser().getUid();
+                    documentReference = firebaseFirestore.collection(UserId).document(UserId);
+                    String number = editText.getText().toString();
+                    final Map<String, Object> data = new HashMap<>();
+                    data.put("productNumber",number);
+                    documentReference.update(data).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void aVoid) {
 
 
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+
+                                }
+                            });
+
+                }
+
+            });
+
+        }
 
     }
 
