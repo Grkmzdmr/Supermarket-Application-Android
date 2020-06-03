@@ -171,11 +171,7 @@ public class cartActivity extends AppCompatActivity {
         public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
 
             String Name = productName.get(viewHolder.getAdapterPosition());
-            productName.remove(viewHolder.getAdapterPosition());
-            productImage.remove(viewHolder.getAdapterPosition());
-            productNumber.remove(viewHolder.getAdapterPosition());
-            productMoney.remove(viewHolder.getAdapterPosition());
-            productLastMoney.remove(viewHolder.getAdapterPosition());
+
 
             FirebaseFirestore.getInstance().collection(UserId).document(Name).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
