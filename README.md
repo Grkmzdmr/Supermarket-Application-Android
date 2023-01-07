@@ -1,6 +1,3 @@
-# SupermarketApplication
-Trakya University 2nd grade project
-
 **Projenin Amacı:**
 Firebase veri tabanı kullanarak kullanıcının e-postasını , şifresini , adres ve ulaşım bilgilerini saklayan . şifre yenileme 
 seçeneği olan , adres ve kullanıcı bilgilerini güncelleyebilme imkanı olan , güncellenen bir sepete sahip, sepetteki ürünleri silinebilen organik ürünler satan bir supermarket yani e-ticaret uygulaması.
